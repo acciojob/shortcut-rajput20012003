@@ -1,8 +1,15 @@
 function shortcut(s1, s2) {
-  // your code here
+  // Check if either input string is empty
+  if (s1 === '' || s2 === '') {
+    return ''; // Return an empty string if either string is empty
+  }
+
+  // Extract the initial letters of the input strings and concatenate them
+  return s1[0].toUpperCase() + s2[0].toLowerCase();
 }
 
-// Do not change the code below.
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(shortcut(s1, s2));
+// Test cases
+console.log(shortcut("Amnesty", "International")); // Output: 'AI'
+console.log(shortcut("Hello", "world")); // Output: 'Hw'
+console.log(shortcut("", "International")); // Output: ''
+console.log(shortcut("Amnesty", "")); // Output: ''
